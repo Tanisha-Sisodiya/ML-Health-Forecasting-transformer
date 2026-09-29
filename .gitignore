@@ -1,0 +1,68 @@
+# ----------------------------------------------------------------------
+# 0. EXCEPTIONS — small result assets committed for the README
+# ----------------------------------------------------------------------
+!assets/
+!assets/*.png
+
+# ----------------------------------------------------------------------
+# 1. ENVIRONMENT & BUILD ARTIFACTS (ALWAYS IGNORE)
+# ----------------------------------------------------------------------
+
+# Virtual Environments (local copy of dependencies)
+# This prevents platform-specific dependencies from being committed.
+venv/
+.venv/
+env/
+.env/
+__pycache__/
+*.pyc
+
+# Python Build and distribution
+build/
+dist/
+*.egg-info/
+
+# ----------------------------------------------------------------------
+# 2. MACHINE LEARNING / DATA ARTIFACTS
+# ----------------------------------------------------------------------
+
+# MLOps & Tracking
+# MLflow local tracking files and databases
+mlruns/
+.mlflow/
+
+# Evidently (Drift Detection tool)
+# If Evidently creates large reports/HTML files locally
+evidently_reports/
+.evidently/
+
+# Model Checkpoints and Results (Avoid committing large binary files)
+# Ignore all large, trained model files
+*.pt
+*.pth
+*.h5
+*.onnx
+*.pkl
+checkpoints/
+models/
+
+# Logs and Scratchpad files
+*.log
+scratchpad/
+
+# ----------------------------------------------------------------------
+# 3. IDE / OS / PLATFORM SPECIFIC FILES
+# ----------------------------------------------------------------------
+
+# macOS System Files (You already staged one of these)
+.DS_Store
+
+# VS Code Files (User specific workspace settings)
+.vscode/
+
+# Jupyter/Colab Notebooks Artifacts
+# Files automatically created by Jupyter/Colab for checkpointing
+.ipynb_checkpoints/
+# Regenerated pipeline outputs (committed copies live in assets/)
+data/artifacts/
+evaluation_results*.png

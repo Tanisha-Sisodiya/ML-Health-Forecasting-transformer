@@ -1,0 +1,15 @@
+#Time Series and Deep Learning Libraries
+torch
+pytorch-lightning
+transformers[torch]
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+
+#MLOps and Monitoring Libraries
+mlflow
+evidently #for drift detection metrics and visualizations
+fastapi
+uvicorn #ASGI server for async applications of FastAPI 
